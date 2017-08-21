@@ -1,7 +1,7 @@
 /*
 
-Title:ScribbleLive Feed
-Description: This script adds the most recent posts in your ScribbleLive event to a web page via the ScribbleLive API. The ScribbleLiveFeed is a fork from recent-posts project created by Matt Mccausland.
+Title: ScribbleLive Feed
+Description: The Scribble Live Feed Widget, create a news feed with the most recent posts in your ScribbleLive Stream. This project is a fork of the recent-posts widget by Matt Mccausland.
 Author: Rafael Rumpel
 Github: https://github.com/RafaelRumpel/scribblelivefeed
 

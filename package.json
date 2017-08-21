@@ -1,21 +1,39 @@
 {
-  "name": "recent-posts",
+  "name": "scribblelivefeed",
+  "description": "This script adds the most recent posts in your ScribbleLive event to a web page via the ScribbleLive API. The ScribbleLiveFeed is a fork from recent-posts project created by Matt Mccausland.",
+  "readmeFilename": "README.md",
+  "main": "scripts/scribblelivefeed.js",
+  "keywords": [
+    "scribble",
+    "live",
+    "feed",
+    "scribblelive",
+    "recent",
+    "posts"
+  ],
+  "tags": [
+    "scribble",
+    "live",
+    "feed",
+    "scribblelive",
+    "recent",
+    "posts"
+  ],
   "version": "1.0.0",
-  "description": "ScribbleLive Recent Posts Widget =========== A javascript that communicates with the ScribbleLive API to get the posts from a specific event. You must be a ScribbleLive enterprise client with access to the ScribbleLive API. You will need a valid API Token.",
-  "main": "SLRecentPostsv1.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "Rafael Rafael",
+    "email": "rafaelgoerl@gmail.com",
+    "homepage": "https://github.com/RafaelRumpel"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RafaelRumpel/recent-posts.git"
+    "url": "git+https://github.com/RafaelRumpel/scribblelivefeed"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RafaelRumpel/recent-posts/issues"
+    "url": "https://github.com/RafaelRumpel/scribblelivefeed/issues"
   },
-  "homepage": "https://github.com/RafaelRumpel/recent-posts#readme",
+  "homepage": "https://github.com/RafaelRumpel/scribblelivefeed#readme",
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",

@@ -1,7 +1,7 @@
 Scribble Live Feed Widget
 ===========
+The Scribble Live Feed Widget, create a news feed with the most recent posts in your ScribbleLive Stream.
 This project is a fork of the recent-posts widget by Matt Mccausland.
-
 
 ## Getting started
 

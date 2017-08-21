@@ -3,12 +3,12 @@
 Title:ScribbleLive Feed
 Description: This script adds the most recent posts in your ScribbleLive event to a web page via the ScribbleLive API. The ScribbleLiveFeed is a fork from recent-posts project created by Matt Mccausland.
 Author: Rafael Rumpel
-Github: ---
+Github: https://github.com/RafaelRumpel/scribblelivefeed
 
 */
 
 function ScribbleLiveFeed(Options) {
-  this.version = '2.0.0';
+  this.version = '1.0.0';
 
   this.Options = {
     // You can find your API tokens - and generate new ones - under the general API section of your ScribbleLive back end. https://client.scribblelive.com/client/API.aspx
@@ -64,7 +64,7 @@ function ScribbleLiveFeed(Options) {
     ItemDeckTimeClass: 'post-deck-time',
     ItemContentClass: 'post-content',
     // Theme Styles
-    Theme: 'css/scribblelivefeed.css'
+    Theme: 'build/css/scribblelivefeed.css'
   };
 
   // Set the option values to the values passed in to the function.

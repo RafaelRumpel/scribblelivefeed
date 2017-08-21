@@ -70,4 +70,6 @@ package-lock.json
 # mac
 .DS_Store
 
+# build
+build/
 # End of https://www.gitignore.io/api/node

@@ -1,0 +1,30 @@
+{
+  "name": "recent-posts",
+  "version": "1.0.0",
+  "description": "ScribbleLive Recent Posts Widget =========== A javascript that communicates with the ScribbleLive API to get the posts from a specific event. You must be a ScribbleLive enterprise client with access to the ScribbleLive API. You will need a valid API Token.",
+  "main": "SLRecentPostsv1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelRumpel/recent-posts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelRumpel/recent-posts/issues"
+  },
+  "homepage": "https://github.com/RafaelRumpel/recent-posts#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

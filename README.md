@@ -10,8 +10,7 @@ Add the main scribblelivefeed.js to the head of your page, and the tag below whe
 ```HTML
 <script type="text/javascript">
 
-    var First = new RecentPosts({
-
+    var ScribbleLiveInstance = new ScribbleLiveFeed({
         APIToken: "",
         EventId: "",
         TotalPostsToShow: 10,
@@ -25,7 +24,7 @@ Add the main scribblelivefeed.js to the head of your page, and the tag below whe
 ###The Script Tag Break Down
 
 
-__var First = new RecentPosts__
+__var ScribbleLiveInstance = new ScribbleLiveFeed__
 
 The variable name can be anything you like. It allows you to add more than one of these widgets to the same page. Give each instance a different variable name and you're good to go.
 

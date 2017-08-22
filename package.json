@@ -2,7 +2,7 @@
   "name": "scribblelivefeed",
   "description": "This script adds the most recent posts in your ScribbleLive event to a web page via the ScribbleLive API. The ScribbleLiveFeed is a fork from recent-posts project created by Matt Mccausland.",
   "readmeFilename": "README.md",
-  "main": "scripts/scribblelivefeed.js",
+  "main": "scribblelivefeed.js",
   "keywords": [
     "scribble",
     "live",
@@ -19,7 +19,7 @@
     "recent",
     "posts"
   ],
-  "version": "1.0.2",
+  "version": "1.1.2",
   "author": {
     "name": "Rafael Rafael",
     "email": "rafaelgoerl@gmail.com",

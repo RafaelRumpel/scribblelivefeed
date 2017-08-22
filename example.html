@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,10 +12,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="build/css/example.css" rel="stylesheet">
+    <link href="example.css" rel="stylesheet">
+
+    <!-- ScribbleLiveFeed Styles -->
+    <link href="scribblelivefeed.css" rel="stylesheet">
 
     <!-- ScribbleLiveFeed Scripts -->
-    <script type="text/javascript" src="build/js/scribblelivefeed.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="scribblelivefeed.js" charset="UTF-8"></script>
   </head>
 
   <body>
@@ -55,7 +57,13 @@
 
             <div id="scribble-live-widget" class="scribble-live-widget"></div>
             <script type="text/javascript">
-                var ScribbleLiveInstance = new ScribbleLiveFeed({
+                // var ScribbleLiveInstance = new ScribbleLiveFeed({
+                //     "APIToken": "0kLk3UUx", // Insert your API TOKEN here
+                //     "EventId": "2645327", // Insert your STREAM ID here
+                //     "WhereToAddPosts": "scribble-live-widget" // Insert your placeholder ID
+                // });
+
+                var ScribbleLiveInstance = new scribblelivefeed({
                     "APIToken": "0kLk3UUx", // Insert your API TOKEN here
                     "EventId": "2645327", // Insert your STREAM ID here
                     "WhereToAddPosts": "scribble-live-widget" // Insert your placeholder ID

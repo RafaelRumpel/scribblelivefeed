@@ -298,6 +298,8 @@
 
 .scribble-load-more:disabled {
   color: gray;
+
+  &:hover { opacity: 1; }
 }
 
 .scribble-load-more:disabled i {

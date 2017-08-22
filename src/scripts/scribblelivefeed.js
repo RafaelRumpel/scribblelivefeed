@@ -15,7 +15,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
 
   var ScribbleLiveFeed = function (Options) {
 
-    this.version = '1.0.0';
+    this.version = '2.1.2';
 
     this.Options = {
       // You can find your API tokens - and generate new ones - under the general API section of your ScribbleLive back end. https://client.scribblelive.com/client/API.aspx
@@ -27,8 +27,8 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       // The id of the element on your page where you would like to display the posts.
       WhereToAddPosts: '',
       // The number of seconds you want to check for new streams
-      // PoolingTime: 31000,
-      PoolingTime: 5000, //debug only
+      PoolingTime: 31000,
+      // PoolingTime: 5000, //debug only
       // Show images, true or false.
       ShowImages: true,
       // Show videos, true or false.

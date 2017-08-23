@@ -10,7 +10,7 @@ Add the main scribblelivefeed.js to the head of your page, and the tag below whe
 ```HTML
 <script type="text/javascript">
 
-    var ScribbleLiveInstance = new ScribbleLiveFeed({
+    var ScribbleLiveInstance = new scribblelivefeed({
         APIToken: "",
         EventId: "",
         TotalPostsToShow: 10,

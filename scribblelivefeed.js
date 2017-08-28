@@ -256,10 +256,10 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       MediaHtml = "<img src='" + Media.Url + "'/>";
     }
     if (pPost.Type === "VIDEO" && Media.Type === "VIDEO") {
-      MediaHtml = "<embed type='application/x-shockwave-flash' src='http://embed.scribblelive.com/js/jwflvplayer/player-licensed.swf?ThreadId=" + this.Options.EventId + "' flashvars='file=" + Media.Url + "'>";
+      MediaHtml = "<embed type='application/x-shockwave-flash' src='//embed.scribblelive.com/js/jwflvplayer/player-licensed.swf?ThreadId=" + this.Options.EventId + "' flashvars='file=" + Media.Url + "'>";
     }
     if (pPost.Type === "AUDIO" && Media.Type === "AUDIO") {
-      MediaHtml = "<embed height='20' width='300' type='application/x-shockwave-flash' src='http://embed.scribblelive.com/js/jwflvplayer/player-licensed.swf?ThreadId=" + this.Options.EventId + "' flashvars='file=" + Media.Url + "'>";
+      MediaHtml = "<embed height='20' width='300' type='application/x-shockwave-flash' src='//embed.scribblelive.com/js/jwflvplayer/player-licensed.swf?ThreadId=" + this.Options.EventId + "' flashvars='file=" + Media.Url + "'>";
     }
 
     // Add the caption to the media added above.
@@ -599,7 +599,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       js = d.createElement('script');
       js.id = id;
       js.async = true;
-      js.src = 'http://embed.scribblelive.com/modules/lib/addons.js';
+      js.src = '//embed.scribblelive.com/modules/lib/addons.js';
       where.parentNode.insertBefore(js, where);
     }(window, document, this.Options.EventId, this));
   };

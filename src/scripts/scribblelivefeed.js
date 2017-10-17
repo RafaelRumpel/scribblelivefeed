@@ -15,7 +15,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
 
   var ScribbleLiveFeed = function (Options) {
 
-    this.version = '2.4.5';
+    this.version = '2.4.6';
 
     this.Options = {
       // You can find your API tokens - and generate new ones - under the general API section of your ScribbleLive back end. https://client.scribblelive.com/client/API.aspx

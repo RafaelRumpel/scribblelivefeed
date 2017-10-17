@@ -15,7 +15,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
 
   var ScribbleLiveFeed = function (Options) {
 
-    this.version = '2.1.2';
+    this.version = '2.4.5';
 
     this.Options = {
       // You can find your API tokens - and generate new ones - under the general API section of your ScribbleLive back end. https://client.scribblelive.com/client/API.aspx
@@ -649,7 +649,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       this.loadMoreBtn.disabled = false;
 
     } else {
-      this.loadMoreBtn.innerHTML = "Exibir Mais <i></i>";
+      this.loadMoreBtn.innerHTML = "Fim";
       this.loadMoreBtn.disabled = true;
     }
   };

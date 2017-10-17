@@ -599,7 +599,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       js = d.createElement('script');
       js.id = id;
       js.async = true;
-      js.src = 'http://embed.scribblelive.com/modules/lib/addons.js';
+      js.src = '//embed.scribblelive.com/modules/lib/addons.js';
       where.parentNode.insertBefore(js, where);
     }(window, document, this.Options.EventId, this));
   };
@@ -641,7 +641,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
   ScribbleLiveFeed.prototype.loadingUpdate = function (loading) {
     if (this.currentPage <= this.totalPages) {
       if (loading) {
-        this.loadMoreBtn.innerHTML = '<svg width="52px" height="52px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt" style=" height: 30px;"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#d0d0d0" fill="none" stroke-width="10" stroke-linecap="round"></circle><circle cx="50" cy="50" r="40" stroke="#555555" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="175.7 75.30000000000001;1 250;175.7 75.30000000000001"></animate></circle></svg>';
+        this.loadMoreBtn.innerHTML = '<svg width="52px" height="52px" xmlns="//www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt" style=" height: 30px;"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#d0d0d0" fill="none" stroke-width="10" stroke-linecap="round"></circle><circle cx="50" cy="50" r="40" stroke="#555555" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="175.7 75.30000000000001;1 250;175.7 75.30000000000001"></animate></circle></svg>';
       } else {
         this.loadMoreBtn.innerHTML = "Exibir Mais <i></i>";
       }

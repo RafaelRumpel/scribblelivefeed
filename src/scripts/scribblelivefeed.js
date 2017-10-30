@@ -10,12 +10,12 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
 ;(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    global.scribblelivefeed = factory()
+    global.scribblelivefeed = factory() // jshint ignore:line
 }(this, (function () {
 
   var ScribbleLiveFeed = function (Options) {
 
-    this.version = '2.4.6';
+    this.version = '2.5.6';
 
     this.Options = {
       // You can find your API tokens - and generate new ones - under the general API section of your ScribbleLive back end. https://client.scribblelive.com/client/API.aspx
@@ -176,7 +176,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       }
 
       // Make the call to the API for updates (Pooling).
-      var wait = setTimeout(function() { self.getNewPosts() }, this.Options.PoolingTime);
+      var wait = setTimeout(function() { self.getNewPosts(); }, this.Options.PoolingTime);
 
     // Load older posts rules
     } else if (type === 'OLDER') {
@@ -301,6 +301,9 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
       }
     }
 
+    // Get new post type
+    var newPostType = (typeof pPost.PostMeta.Type !== 'undefined') ? pPost.PostMeta.Type : 'scribble:post';
+
     // Create a new list item with the post id as the id attribute.
     var newListItem = document.createElement("li");
     newListItem.id = pPost.Id;
@@ -316,59 +319,64 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
     var newItemContainer = document.createElement("div");
     newItemContainer.className = this.Options.ItemContainerClass;
 
-    // Create item deck
-    var newItemDeck = document.createElement("div");
-    newItemDeck.className = this.Options.ItemDeckClass;
-
-    // If there is an avatar associated with the creator of the post, create an image tag with the avatar url as the src attribute.
-    var newItemAvatarImage;
-    if (pPost.Creator.Avatar !== '' && this.Options.ShowAvatars) {
-      newItemAvatarImage = document.createElement("img");
-      newItemAvatarImage.src = pPost.Creator.Avatar;
-      newItemAvatarImage.className = this.Options.ItemAvatarImageClass;
-    }
-    if (newItemAvatarImage !== undefined) {
-      newItemDeck.appendChild(newItemAvatarImage);
-    }
-
-    // Create item author name. If the source is a social network, add a link to the social network account.
-    var newItemAuthorName = document.createElement("div");
-    newItemAuthorName.className = this.Options.ItemAvatarNameClass;
-    newItemAuthorName.innerHTML = pPost.Creator.Name;
-    newItemDeck.appendChild(newItemAuthorName);
-
-    // Create item deck time
-    var newItemDeckTime = document.createElement("div");
-    newItemDeckTime.className = this.Options.ItemDeckTimeClass;
-    newItemDeckTime.innerHTML = this.getTimeSince(new Date(pPost.LastModifiedDate));
-    newItemDeck.appendChild(newItemDeckTime);
-
     // Create a div with a class of Content that contains the post content.
     var newContentDiv = document.createElement("div");
     newContentDiv.className = this.Options.ItemContentClass;
 
+    if (newPostType === "scribble:post") {
+      // Create item deck
+      var newItemDeck = document.createElement("div");
+      newItemDeck.className = this.Options.ItemDeckClass;
+
+      // If there is an avatar associated with the creator of the post, create an image tag with the avatar url as the src attribute.
+      var newItemAvatarImage;
+      if (pPost.Creator.Avatar !== '' && this.Options.ShowAvatars) {
+        newItemAvatarImage = document.createElement("img");
+        newItemAvatarImage.src = pPost.Creator.Avatar;
+        newItemAvatarImage.className = this.Options.ItemAvatarImageClass;
+      }
+      if (newItemAvatarImage !== undefined) {
+        newItemDeck.appendChild(newItemAvatarImage);
+      }
+
+      // Create item author name. If the source is a social network, add a link to the social network account.
+      var newItemAuthorName = document.createElement("div");
+      newItemAuthorName.className = this.Options.ItemAvatarNameClass;
+      newItemAuthorName.innerHTML = pPost.Creator.Name;
+      newItemDeck.appendChild(newItemAuthorName);
+
+      // Create item deck time
+      var newItemDeckTime = document.createElement("div");
+      newItemDeckTime.className = this.Options.ItemDeckTimeClass;
+      newItemDeckTime.innerHTML = this.getTimeSince(new Date(pPost.LastModifiedDate));
+      newItemDeck.appendChild(newItemDeckTime);
+
+      newItemContainer.appendChild(newItemDeck);
+      newContentDiv.innerHTML = pPost.Content;
+    }
+
     // If the post is a facebook:post.
-    if (pPost.PostMeta.Type === "facebook:post") {
+    else if (newPostType === "facebook:post") {
       var facebookEmbed = pPost.Content;
-      var facebookEmbedWidth = this.currentDevice === 'mobile' ? 'auto' : '540';
+      var facebookEmbedWidth = this.currentDevice === 'mobile' ? 'auto' : '575';
       facebookEmbed = facebookEmbed.replace('data-width="500"', 'data-width="' + facebookEmbedWidth + '"');
       newContentDiv.className += " facebook-post";
       newContentDiv.innerHTML = facebookEmbed;
     }
 
     // If the post is a twitter:tweet.
-    else if (pPost.PostMeta.Type === "twitter:tweet") {
+    else if (newPostType === "twitter:tweet") {
       var twitterEmbed = pPost.Content;
       newContentDiv.className += " twitter-tweet";
       newContentDiv.innerHTML = twitterEmbed;
     }
 
     // TO DO: If the post is a instagram:post.
-    // else if (pPost.PostMeta.Type === "instagram:post") {
+    // else if (newPostType === "instagram:post") {
     //   newContentDiv.innerHTML = pPost.Content;
     // }
 
-    else if (pPost.PostMeta.Type === "youtube:post") {
+    else if (newPostType === "youtube:post") {
       var youtubeEmbed = pPost.Content;
       var youtubeEmbedHeigth = this.currentDevice === 'mobile' ? 'auto' : '420';
       youtubeEmbed = youtubeEmbed.replace('width="500" height="300"', 'width="100%" height="' + youtubeEmbedHeigth + '"');
@@ -397,7 +405,6 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
     }
 
     // Add the item deck and item content to the item container div.
-    newItemContainer.appendChild(newItemDeck);
     newItemContainer.appendChild(newContentDiv);
 
     // Add the timeline and the container div to the list item.

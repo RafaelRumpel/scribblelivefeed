@@ -10,11 +10,11 @@
   -webkit-box-sizing: content-box !important;
   box-sizing: content-box !important;
 
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 3s;
+  -moz-animation: fadein 4s; /* Firefox < 16 */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera < 12.1 */
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 4s;
 
   @media (min-width: 400px) { width: 380px; }
   @media (min-width: 480px) { width: 440px; }
@@ -28,7 +28,7 @@
 
   &:hover {
     opacity: .8;
-    transition: opacity .35s ease;
+    transition: opacity .34s ease;
   }
 
   h3 {
@@ -190,6 +190,12 @@
   padding-bottom: 5px;
   width: 100%;
 
+  -moz-animation: fadein 4s; /* Firefox < 16 */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera < 12.1 */
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 4s;
+
   figure { margin: 25px 0; }
   img { width: 100%; }
 
@@ -256,21 +262,11 @@
 }
 
 .post-content.facebook-post {
-  text-align: center;
+  overflow: scroll;
 
   @media (min-width: 768px) {
-    border: 1px solid #e5e5e5;
-    box-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.05);
-    padding: 30px 0;
+    overflow: initial;
   }
-}
-
-.fb-post, twitterwidget {
-  -moz-animation: fadein 3s; /* Firefox < 16 */
-  -ms-animation: fadein 3s; /* Internet Explorer */
-  -o-animation: fadein 3s; /* Opera < 12.1 */
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-  animation: fadein 3s;
 }
 
 .scribble-load-more {

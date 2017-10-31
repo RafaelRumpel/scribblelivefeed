@@ -366,7 +366,7 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
 
     // If the post is a twitter:tweet.
     else if (newPostType === "twitter:tweet") {
-      var twitterEmbed = pPost.Content;
+      var twitterEmbed = '<blockquote class="twitter-tweet twitter-blockquote">' + pPost.Source + '</blockquote>';
       newContentDiv.className += " twitter-tweet";
       newContentDiv.innerHTML = twitterEmbed;
     }

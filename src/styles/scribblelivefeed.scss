@@ -316,7 +316,7 @@
 @media (min-width: 480px) {
   .scribble-load-more {
     float: none;
-    width: 420px;
+    width: 418px;
   }
 }
 
@@ -332,7 +332,7 @@
   .scribble-load-more {
     float: none;
     margin-left: 60px;
-    width: 420px;
+    width: 418px;
   }
 }
 
@@ -340,7 +340,7 @@
   .scribble-load-more {
     float: none;
     margin-left: 60px;
-    width: 420px;
+    width: 418px;
   }
 }
 
@@ -348,9 +348,11 @@
   .scribble-load-more {
     float: none;
     margin-left: 60px;
-    width: 635px;
+    width: 638px;
   }
 }
+
+.twitter-blockquote { opacity: 0; }
 
 twitterwidget::shadow .EmbeddedTweet {
     max-width: 100%;

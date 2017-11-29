@@ -276,6 +276,9 @@ Github: https://github.com/RafaelRumpel/scribblelivefeed
 
   // The function that adds a post.
   ScribbleLiveFeed.prototype.buildPost = function (pPost, pPostList, type) {
+    // Id Scribble is sending Source === Null, return the card
+    pPost.Source = pPost.Source || "";
+
     // A huge if statement that decides if it should be showing a post or not based on the options set when the widget is loaded.
     if (
       (pPost.Type === "IMAGE" && !this.Options.ShowImages) ||
